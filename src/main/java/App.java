@@ -12,12 +12,12 @@ public class App {
         staticFileLocation("/public");
 
         //get: delete all tasks
-        get("/tasks/delete", (req, res) -> {
-            Map<String, Object> model = new HashMap<>();
-            Task.clearAllTasks();
-            res.redirect("/");
-            return null;
-        }, new HandlebarsTemplateEngine());
+        // get("/tasks/delete", (req, res) -> {
+        //     Map<String, Object> model = new HashMap<>();
+        //     Task.clearAllTasks();
+        //     res.redirect("/");
+        //     return null;
+        // }, new HandlebarsTemplateEngine());
 
         //get: delete an individual task
         get("/tasks/:id/delete", (req, res) -> {
